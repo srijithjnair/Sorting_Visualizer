@@ -1,80 +1,153 @@
-.dark-background {
-    background-color: #1b1b2f;
-}
 
-.text-color {
-    color: #e43f5a;
-}
 
 body {
     background-color: #162447;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    gap: 0;
+}
+
+.left-panel {
+    width: 350px;
+    min-width: 300px;
+    background: #1b1b2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 2;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.panel-card {
+    background: #23234b;
+    border-radius: 18px;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.panel-title {
+    color: #e43f5a;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.range-input {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.range-input .label {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+}
+.range-input input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 160px;
+    height: 4px;
+    background: #e43f5a;
+    border-radius: 2px;
+    outline: none;
+    margin-left: 16px;
+}
+
+.control-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.sort-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.sort-btns .btn {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.sort-btns .btn:hover, .sort-btns .btn:focus {
+    background: #e43f5a;
+    color: #fff;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: #162447;
+    position: relative;
+    min-height: 600px;
+    overflow: auto;
+    padding: 32px 0;
+}
+
+#sorting {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1100px;
+    min-height: 400px;
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: #23234b;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 24px 0;
+    margin-bottom: 0;
+    transform: none;
+    overflow-x: auto;
 }
 
 .flex-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
     width: 100%;
-    height: 600px;
+    min-height: 400px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
     transition: 2s all ease;
+    gap: 2px;
 }
 
 .flex-item {
     background: #e43f5a;
-    border: 1pt solid black;
+    border: 1pt solid #23234b;
     width: 10px;
     transition: 0.1s all ease;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-}
-
-#input-panel {
-    margin-top: 50px;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-#sorting {
-    margin-bottom: 50px;
-    transform: rotate(180deg) scaleX(-1); 
-}
-
-.range-input {
-    box-sizing: border-box;
-    top: 50%;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    align-items: center;
-    border-radius: 10px;
-    line-height: 50px;
-    display: flex;
-    vertical-align: middle;
-    height: 50px;
-}
-.range-input input {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 2px;
-    background-color: #e43f5a;
-
-    position: absolute;
-    top: 50%;
-}
-
-
-.range-input .label{
-    color: white;
-    font-weight:600;
-    display: flex; 
-    height: 35px; 
-    line-height: 35px; 
-    margin: auto;
+    border-radius: 4px 4px 0 0;
+    margin: 0 1px;
 }
